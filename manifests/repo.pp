@@ -1,3 +1,23 @@
+# = Definition: git::repo
+#
+# == Parameters:
+#
+# $target::   Target folder. Required.
+#
+# $bare::     Create a bare repository. Defaults to false.
+#
+# $source::   Source to clone from. If not specified, no remote will be used.
+#
+# $user::     Owner of the repository. Defaults to root.
+#
+# == Usage:
+#
+#   git::repo {'mygit':
+#     target => '/home/user/puppet-git',
+#     source => 'git://github.com/theforeman/puppet-git.git',
+#     user   => 'user',
+#   }
+#
 define git::repo (
   $target,
   $bare    = false,
