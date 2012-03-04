@@ -1,5 +1,7 @@
 define git::repo($target, $bare = false, $source = false, $user = 'root') {
 
+  require git::params
+
   if $source {
     $cmd = "${git::params::bin} clone $source $target --recursive"
   } else {
