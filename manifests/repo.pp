@@ -39,7 +39,7 @@ define git::repo (
 
   $creates = $bare ? {
     true  => "${target}/objects",
-    false => $target,
+    false => "${target}/.git",
   }
 
   exec { "git_repo_for_${name}":
