@@ -4,7 +4,7 @@
 #
 #
 class git::install {
-  package { $git::package:
-    ensure => $git::package_ensure,
+  package { $::git::package:
+    ensure => $::git::package_ensure,
   }
 }
