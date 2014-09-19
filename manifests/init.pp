@@ -4,8 +4,8 @@
 # use this module.
 #
 class git (
-  $package_ensure = $::git::params::package_ensure,
   $package        = $::git::params::package,
+  $package_ensure = $::git::params::package_ensure,
 ) inherits git::params {
   include git::install
 }
