@@ -3,7 +3,7 @@
   "version":      "1.4.0",
   "author":       "theforeman",
   "summary":      "git installation and configuration",
-  "license":      "GPLv3+",
+  "license":      "GPL-3.0+",
   "source":       "git://github.com/theforeman/puppet-git",
   "project_page": "https://github.com/theforeman/puppet-git",
   "issues_url":   "https://github.com/theforeman/puppet-git/issues",
