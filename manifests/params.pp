@@ -16,9 +16,17 @@
 #     bin => '/usr/local/bin/git',
 #   }
 #
-class git::params (
-  $bin = '/usr/bin/git',
-  $package = 'git',
-  $package_ensure = 'installed',
-) {
+class git::params {
+  case $::osfamily {
+    /^(FreeBSD|DragonFly)$/: {
+      $bin = '/usr/local/bin/git'
+      $package = 'git'
+      $package_ensure = 'installed'
+    }
+    default: {
+      $bin = '/usr/bin/git'
+      $package = 'git'
+      $package_ensure = 'installed'
+    }
+  }
 }
