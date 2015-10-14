@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.0
+* Add FreeBSD support
+* Support Puppet 4 and future parser
+
 ## 1.4.1
 * Add minimal tests, increased linting
 * Fixes to metadata quality
