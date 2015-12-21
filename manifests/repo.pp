@@ -14,6 +14,8 @@
 #
 # $mode::     Mode of the repository root. Defaults to 0755.
 #
+# $bin::      Git binary. Defaults to /usr/bin/git or /usr/local/bin/git. 
+#
 # == Usage:
 #
 #   git::repo {'mygit':
@@ -30,19 +32,23 @@ define git::repo (
   $group   = 'root',
   $mode    = '0755',
   $workdir = '/tmp',
+  $args    = undef,
+  $bin     = $git::params::bin,
 ) {
 
-  require git::params
+  if $args {
+    validate_string($args)
+  }
 
-  $args = $bare ? {
-    true    => '--bare',
-    false   => ''
+  $args_real = $bare ? {
+    true    => "${args} --bare",
+    false   => $args,
   }
 
   if $source {
-    $cmd = "${::git::params::bin} clone ${args} --recursive ${source} ${target}"
+    $cmd = "${bin} clone ${args_real} --recursive ${source} ${target}"
   } else {
-    $cmd = "${::git::params::bin} init ${args} ${target}"
+    $cmd = "${bin} init ${args_real} ${target}"
   }
 
   $creates = $bare ? {
