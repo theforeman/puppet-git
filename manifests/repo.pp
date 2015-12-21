@@ -10,6 +10,10 @@
 #
 # $user::     Owner of the repository. Defaults to root.
 #
+# $group::    Group of the repository. Defaults to root.
+#
+# $mode::     Mode of the repository root. Defaults to 0755.
+#
 # == Usage:
 #
 #   git::repo {'mygit':
@@ -23,6 +27,8 @@ define git::repo (
   $bare    = false,
   $source  = false,
   $user    = 'root',
+  $group   = 'root',
+  $mode    = '0755',
   $workdir = '/tmp',
 ) {
 
@@ -44,6 +50,13 @@ define git::repo (
     false => "${target}/.git",
   }
 
+  file { $target:
+    ensure => directory,
+    owner  => $user,
+    group  => $group,
+    mode   => $mode,
+  }
+  ->
   exec { "git_repo_for_${name}":
     command => $cmd,
     creates => $creates,
