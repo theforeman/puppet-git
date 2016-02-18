@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.0
+* Add group, mode parameters for repo directory permissions
+* Add args parameter for arbitrary git arguments
+* Ensure repo directory is present before running git
+* Support bare cloning with git::repo::bare set
+* Support Puppet 3.0 minimum
+* Support Fedora 21, remove Debian 6 (Squeeze), add Debian 8 and Ubuntu 16.04
+
 ## 1.5.0
 * Add FreeBSD support
 * Support Puppet 4 and future parser
