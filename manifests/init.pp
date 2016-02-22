@@ -6,6 +6,12 @@
 class git (
   $package        = $::git::params::package,
   $package_ensure = $::git::params::package_ensure,
+
+  ### START Hiera Lookups ###
+  $repo = hiera_has('git::repo', {}),
+  ### END Hiera Lookups ###
 ) inherits ::git::params {
   include ::git::install
+  
+  create_resources('git::repo', $repo)
 }
