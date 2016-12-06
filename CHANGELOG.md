@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.0
+* Drop Ruby 1.8.7 support
+
 ## 1.6.0
 * Add group, mode parameters for repo directory permissions
 * Add args parameter for arbitrary git arguments
