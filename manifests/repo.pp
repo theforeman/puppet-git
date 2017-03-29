@@ -62,8 +62,7 @@ define git::repo (
     group  => $group,
     mode   => $mode,
   }
-  ->
-  exec { "git_repo_for_${name}":
+  -> exec { "git_repo_for_${name}":
     command => $cmd,
     creates => $creates,
     cwd     => $workdir,
