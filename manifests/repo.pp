@@ -66,7 +66,7 @@ define git::repo (
     command => $cmd,
     creates => $creates,
     cwd     => $workdir,
-    require => Class['git::install'],
+    require => Class['::git::install'],
     user    => $user,
   }
 }
