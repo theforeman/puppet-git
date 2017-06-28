@@ -7,7 +7,8 @@ describe 'git' do
         facts
       end
 
-      it { should compile.with_all_deps }
+      it { is_expected.to compile.with_all_deps }
+      it { is_expected.to contain_package('git').with_ensure('installed') }
     end
   end
 end

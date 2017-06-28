@@ -14,7 +14,11 @@
 #
 # $mode::     Mode of the repository root. Defaults to 0755.
 #
-# $bin::      Git binary. Defaults to /usr/bin/git or /usr/local/bin/git. 
+# $workdir::  The working directory while executing git
+#
+# $args::     Optional arguments to the git command
+#
+# $bin::      Git binary
 #
 # == Usage:
 #
@@ -25,20 +29,17 @@
 #   }
 #
 define git::repo (
-  $target,
-  $bare    = false,
-  $source  = false,
-  $user    = 'root',
-  $group   = 'root',
-  $mode    = '0755',
-  $workdir = '/tmp',
-  $args    = undef,
-  $bin     = $git::params::bin,
+  String $target,
+  Boolean $bare = false,
+  Boolean $source = false,
+  String $user = 'root',
+  String $group = 'root',
+  String $mode = '0755',
+  String $workdir = '/tmp',
+  Optional[String] $args = undef,
+  String $bin = $::git::bin,
 ) {
-
-  if $args {
-    validate_string($args)
-  }
+  require ::git
 
   $args_real = $bare ? {
     true    => "${args} --bare",
@@ -66,7 +67,6 @@ define git::repo (
     command => $cmd,
     creates => $creates,
     cwd     => $workdir,
-    require => Class['git::install'],
     user    => $user,
   }
 }

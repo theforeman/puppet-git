@@ -1,0 +1,4 @@
+---
+git::package: "git"
+git::package_ensure: "installed"
+git::bin: "/usr/bin/git"
