@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.0.0
+* Drop Puppet 3 support
+* Use Puppet 4 data types
+* Use Hiera data provider
+* Support Debian 9
+* Allow overriding the git binary from the main class
+
 ## 2.0.0
 * Drop Ruby 1.8.7 support
 
