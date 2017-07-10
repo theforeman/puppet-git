@@ -1,6 +1,6 @@
 {
   "name": "theforeman-git",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": "theforeman",
   "summary": "git installation and configuration",
   "license": "GPL-3.0+",
@@ -12,7 +12,9 @@
     "foreman",
     "git"
   ],
-  "dependencies": [],
+  "dependencies": [
+
+  ],
   "requirements": [
     {
       "name": "puppet",
