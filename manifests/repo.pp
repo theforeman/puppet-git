@@ -35,7 +35,7 @@ define git::repo (
   String $user = 'root',
   String $group = 'root',
   String $mode = '0755',
-  String $workdir = '/tmp',
+  Stdlib::Absolutepath $workdir = '/tmp',
   Optional[String] $args = undef,
   String $bin = $::git::bin,
 ) {

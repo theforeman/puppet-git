@@ -1,3 +1,5 @@
 fixtures:
   symlinks:
     git: "#{source_dir}"
+  repositories:
+    stdlib: 'https://github.com/puppetlabs/puppetlabs-stdlib'
