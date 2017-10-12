@@ -24,7 +24,5 @@ class git (
   $package = undef,
   $package_ensure = undef,
 ) {
-  package { $package:
-    ensure => $package_ensure,
-  }
+  ensure_packages([$package], {'ensure' => $package_ensure})
 }
