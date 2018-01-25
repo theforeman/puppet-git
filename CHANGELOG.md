@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.0.0](https://github.com/theforeman/puppet-git/tree/4.0.0) (2018-01-25)
+[Full Changelog](https://github.com/theforeman/puppet-git/compare/3.0.0...4.0.0)
+
+**Breaking changes:**
+
+- Update hiera yaml to version 5 [\#30](https://github.com/theforeman/puppet-git/pull/30) ([mmoll](https://github.com/mmoll))
+
+**Implemented enhancements:**
+
+- remove EOL OSes, add new ones [\#33](https://github.com/theforeman/puppet-git/pull/33) ([mmoll](https://github.com/mmoll))
+- Use stdlib for ensure\_packages and Absolutepath [\#32](https://github.com/theforeman/puppet-git/pull/32) ([ekohl](https://github.com/ekohl))
+
 ## 3.0.0
 * Drop Puppet 3 support
 * Use Puppet 4 data types
