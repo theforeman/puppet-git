@@ -1,6 +1,15 @@
 # Changelog
 
+## [4.1.0](https://github.com/theforeman/puppet-git/tree/4.1.0) (2018-07-16)
+
+[Full Changelog](https://github.com/theforeman/puppet-git/compare/4.0.0...4.1.0)
+
+**Implemented enhancements:**
+
+- Support Ubuntu/bionic, drop Fedora 25 & Debian 7 [\#39](https://github.com/theforeman/puppet-git/pull/39) ([mmoll](https://github.com/mmoll))
+
 ## [4.0.0](https://github.com/theforeman/puppet-git/tree/4.0.0) (2018-01-25)
+
 [Full Changelog](https://github.com/theforeman/puppet-git/compare/3.0.0...4.0.0)
 
 **Breaking changes:**
