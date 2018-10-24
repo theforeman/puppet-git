@@ -2,7 +2,7 @@
 
 Installs and configures git.
 
-Part of the Foreman installer: http://github.com/theforeman/foreman-installer
+Part of the Foreman installer: https://github.com/theforeman/foreman-installer
 
 # Contributing
 
@@ -12,7 +12,7 @@ Part of the Foreman installer: http://github.com/theforeman/foreman-installer
 
 # More info
 
-See http://theforeman.org or at #theforeman irc channel on freenode
+See https://theforeman.org or at #theforeman irc channel on freenode
 
 Copyright (c) 2010-2013 Ohad Levy and their respective owners
 
