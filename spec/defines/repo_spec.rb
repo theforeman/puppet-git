@@ -11,7 +11,7 @@ describe 'git::repo' do
 
       context 'with minimal parameters' do
         let :pre_condition do
-          'include ::git'
+          'include git'
         end
 
         let(:params) do
