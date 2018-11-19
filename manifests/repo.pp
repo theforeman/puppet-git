@@ -37,9 +37,9 @@ define git::repo (
   String $mode = '0755',
   Stdlib::Absolutepath $workdir = '/tmp',
   Optional[String] $args = undef,
-  String $bin = $::git::bin,
+  String $bin = $git::bin,
 ) {
-  require ::git
+  require git
 
   $args_real = $bare ? {
     true    => "${args} --bare",
