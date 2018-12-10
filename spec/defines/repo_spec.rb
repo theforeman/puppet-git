@@ -9,7 +9,7 @@ describe 'git::repo' do
 
       let(:title) { 'mygit' }
 
-      context 'with minimal parameters' do
+      context 'with inherited parameters' do
         let :pre_condition do
           'include git'
         end
@@ -22,13 +22,32 @@ describe 'git::repo' do
 
         binary = ['DragonflyBSD', 'FreeBSD'].include?(facts[:osfamily]) ? '/usr/local/bin/git' : '/usr/bin/git'
 
-        it do
-          should contain_exec('git_repo_for_mygit').with(
-            'command' => "#{binary} init  /tmp/somerepo",
-            'creates' => '/tmp/somerepo/.git',
-            'cwd'     => '/tmp',
-            'user'    => 'root',
-          )
+        context 'with minimal parameters' do
+          it do
+            should contain_exec('git_repo_for_mygit').with(
+              'command' => "#{binary} init  /tmp/somerepo",
+              'creates' => '/tmp/somerepo/.git',
+              'cwd'     => '/tmp',
+              'user'    => 'root',
+            )
+          end
+        end
+
+        context 'with source' do
+          let(:params) { super().merge(source: 'https://git.example.com/repo.git') }
+
+          context 'full repo' do
+            it do should contain_exec('git_repo_for_mygit')
+              .with_command("#{binary} clone  --recursive https://git.example.com/repo.git /tmp/somerepo")
+            end
+          end
+
+          context 'bare repo' do
+          let(:params) { super().merge(bare: true) }
+            it do should contain_exec('git_repo_for_mygit')
+              .with_command("#{binary} clone  --bare --recursive https://git.example.com/repo.git /tmp/somerepo")
+            end
+          end
         end
       end
 
@@ -37,7 +56,7 @@ describe 'git::repo' do
           {
             :target  => '/tmp/somerepo.git',
             :bare    => true,
-            :source  => false,
+            :source  => 'https://git.example.com/repo.git',
             :user    => 'root',
             :workdir => '/tmp',
             :args    => '-c core.sharedRepository=true',
@@ -47,7 +66,7 @@ describe 'git::repo' do
 
         it do
           should contain_exec('git_repo_for_mygit').with(
-            'command' => "git init -c core.sharedRepository=true --bare /tmp/somerepo.git",
+            'command' => "git clone -c core.sharedRepository=true --bare --recursive https://git.example.com/repo.git /tmp/somerepo.git",
             'creates' => '/tmp/somerepo.git/objects',
             'cwd'     => '/tmp',
             'user'    => 'root',

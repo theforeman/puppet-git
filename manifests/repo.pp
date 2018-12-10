@@ -31,7 +31,7 @@
 define git::repo (
   String $target,
   Boolean $bare = false,
-  Boolean $source = false,
+  Optional[String] $source = undef,
   String $user = 'root',
   String $group = 'root',
   String $mode = '0755',
