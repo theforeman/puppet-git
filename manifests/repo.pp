@@ -1,30 +1,36 @@
-# = Definition: git::repo
+# Check out a git repository
 #
-# == Parameters:
+# @param target
+#   Target folder
 #
-# $target::   Target folder. Required.
+# @param bare
+#   Create a bare repository
 #
-# $bare::     Create a bare repository. Defaults to false.
+# @param source
+#   Source to clone from. If not specified, no remote will be used.
 #
-# $source::   Source to clone from. If not specified, no remote will be used.
+# @param user
+#   Owner of the repository
 #
-# $user::     Owner of the repository. Defaults to root.
+# @param group
+#   Group of the repository
 #
-# $group::    Group of the repository. Defaults to root.
+# @param mode
+#   Mode of the repository root
 #
-# $mode::     Mode of the repository root. Defaults to 0755.
+# @param workdir
+#   The working directory while executing git
 #
-# $workdir::  The working directory while executing git
+# @param args
+#   Optional arguments to the git command
 #
-# $args::     Optional arguments to the git command
+# @param bin
+#   Git binary
 #
-# $bin::      Git binary
-#
-# == Usage:
-#
+# @example Clone a git repository
 #   git::repo {'mygit':
 #     target => '/home/user/puppet-git',
-#     source => 'git://github.com/theforeman/puppet-git.git',
+#     source => 'https://github.com/theforeman/puppet-git.git',
 #     user   => 'user',
 #   }
 #
