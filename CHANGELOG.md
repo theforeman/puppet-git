@@ -1,5 +1,25 @@
 # Changelog
 
+## [5.0.0](https://github.com/theforeman/puppet-git/tree/5.0.0) (2019-01-10)
+
+[Full Changelog](https://github.com/theforeman/puppet-git/compare/4.1.1...5.0.0)
+
+**Breaking changes:**
+
+- Use the correct type on $source [\#51](https://github.com/theforeman/puppet-git/pull/51) ([ekohl](https://github.com/ekohl))
+
+**Implemented enhancements:**
+
+- Support Puppet 6 [\#49](https://github.com/theforeman/puppet-git/pull/49) ([ekohl](https://github.com/ekohl))
+
+**Closed issues:**
+
+- git::repo usage example and definition don't match - I can't clone a repo right now [\#50](https://github.com/theforeman/puppet-git/issues/50)
+
+**Merged pull requests:**
+
+- Convert documentation to puppet-strings [\#53](https://github.com/theforeman/puppet-git/pull/53) ([ekohl](https://github.com/ekohl))
+
 ## [4.1.1](https://github.com/theforeman/puppet-git/tree/4.1.1) (2018-10-15)
 
 [Full Changelog](https://github.com/theforeman/puppet-git/compare/4.1.0...4.1.1)
