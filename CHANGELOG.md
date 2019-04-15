@@ -1,5 +1,14 @@
 # Changelog
 
+## [6.0.0](https://github.com/theforeman/puppet-git/tree/6.0.0) (2019-04-15)
+
+[Full Changelog](https://github.com/theforeman/puppet-git/compare/5.0.0...6.0.0)
+
+**Breaking changes:**
+
+- drop Puppet 4 [\#57](https://github.com/theforeman/puppet-git/pull/57) ([mmoll](https://github.com/mmoll))
+- drop EOL OSes [\#56](https://github.com/theforeman/puppet-git/pull/56) ([mmoll](https://github.com/mmoll))
+
 ## [5.0.0](https://github.com/theforeman/puppet-git/tree/5.0.0) (2019-01-10)
 
 [Full Changelog](https://github.com/theforeman/puppet-git/compare/4.1.1...5.0.0)
