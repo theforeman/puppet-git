@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.0.1](https://github.com/theforeman/puppet-git/tree/6.0.1) (2019-06-12)
+
+[Full Changelog](https://github.com/theforeman/puppet-git/compare/6.0.0...6.0.1)
+
+**Merged pull requests:**
+
+- allow newer puppetlabs-stdlib version [\#59](https://github.com/theforeman/puppet-git/pull/59) ([mmoll](https://github.com/mmoll))
+
 ## [6.0.0](https://github.com/theforeman/puppet-git/tree/6.0.0) (2019-04-15)
 
 [Full Changelog](https://github.com/theforeman/puppet-git/compare/5.0.0...6.0.0)
