@@ -12,9 +12,9 @@ configure_beaker do |host|
     # refresh check if cache needs refresh on next yum command
     on host, 'yum clean expire-cache'
 
-    # this is absent in the el8 container images used for testing
-    if fact_on(host, 'os.release.major') == '8'
-      on host, puppet('resource', 'package', 'glibc-langpack-en', 'ensure=installed')
+    local_setup = File.join(__dir__, 'setup_acceptance_node.pp')
+    if File.exist?(local_setup)
+      apply_manifest_on(host, File.read(local_setup), catch_failures: true)
     end
   end
 end
