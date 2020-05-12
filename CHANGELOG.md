@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.1.0](https://github.com/theforeman/puppet-git/tree/6.1.0) (2020-05-12)
+
+[Full Changelog](https://github.com/theforeman/puppet-git/compare/6.0.2...6.1.0)
+
+**Implemented enhancements:**
+
+- Fixes [\#29704](https://projects.theforeman.org/issues/29704): Add EL8 support [\#67](https://github.com/theforeman/puppet-git/pull/67) ([ehelms](https://github.com/ehelms))
+
 ## [6.0.2](https://github.com/theforeman/puppet-git/tree/6.0.2) (2020-02-11)
 
 [Full Changelog](https://github.com/theforeman/puppet-git/compare/6.0.1...6.0.2)
