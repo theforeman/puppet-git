@@ -24,6 +24,10 @@
 # @param args
 #   Optional arguments to the git command
 #
+# @param timeout
+#   Optional Timeout in Seconds for the Git-Command to execute.
+#   Puppet's "exec" defaults to 300 Seconds
+#
 # @param bin
 #   Git binary
 #
@@ -43,6 +47,7 @@ define git::repo (
   String $mode = '0755',
   Stdlib::Absolutepath $workdir = '/tmp',
   Optional[String] $args = undef,
+  Optional[Integer] $timeout = undef,
   String $bin = $git::bin,
 ) {
   require git
@@ -73,6 +78,7 @@ define git::repo (
     command => $cmd,
     creates => $creates,
     cwd     => $workdir,
+    timeout => $timeout,
     user    => $user,
   }
 }
