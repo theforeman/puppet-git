@@ -1,6 +1,6 @@
 {
   "name": "theforeman-git",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "author": "theforeman",
   "summary": "git installation and configuration",
   "license": "GPL-3.0+",
