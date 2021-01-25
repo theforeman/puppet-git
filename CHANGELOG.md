@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.2.0](https://github.com/theforeman/puppet-git/tree/6.2.0) (2021-01-26)
+
+[Full Changelog](https://github.com/theforeman/puppet-git/compare/6.1.0...6.2.0)
+
+**Implemented enhancements:**
+
+- New Parameter "Timeout" for Git-Command [\#71](https://github.com/theforeman/puppet-git/pull/71) ([cocker-cc](https://github.com/cocker-cc))
+
 ## [6.1.0](https://github.com/theforeman/puppet-git/tree/6.1.0) (2020-05-12)
 
 [Full Changelog](https://github.com/theforeman/puppet-git/compare/6.0.2...6.1.0)
