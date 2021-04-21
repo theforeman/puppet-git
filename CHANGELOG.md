@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.3.0](https://github.com/theforeman/puppet-git/tree/6.3.0) (2021-04-26)
+
+[Full Changelog](https://github.com/theforeman/puppet-git/compare/6.2.0...6.3.0)
+
+**Implemented enhancements:**
+
+- Support Puppet 7 [\#74](https://github.com/theforeman/puppet-git/pull/74) ([ekohl](https://github.com/ekohl))
+
 ## [6.2.0](https://github.com/theforeman/puppet-git/tree/6.2.0) (2021-01-26)
 
 [Full Changelog](https://github.com/theforeman/puppet-git/compare/6.1.0...6.2.0)
