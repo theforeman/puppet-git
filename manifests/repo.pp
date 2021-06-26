@@ -37,7 +37,7 @@
 define git::repo (
   String $target,
   Boolean $bare = false,
-  Optional[String] $source = undef,
+  Optional[Variant[String, Sensitive[String]]] $source = undef,
   String $user = 'root',
   String $group = 'root',
   String $mode = '0755',
@@ -52,7 +52,9 @@ define git::repo (
     false   => $args,
   }
 
-  if $source {
+  if $source =~ Sensitive {
+    $cmd = Sensitive.new("${bin} clone ${args_real} --recursive ${source.unwrap} ${target}")
+  } elsif $source {
     $cmd = "${bin} clone ${args_real} --recursive ${source} ${target}"
   } else {
     $cmd = "${bin} init ${args_real} ${target}"
