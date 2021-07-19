@@ -1,5 +1,18 @@
 # Changelog
 
+## [7.0.0](https://github.com/theforeman/puppet-git/tree/7.0.0) (2021-07-22)
+
+[Full Changelog](https://github.com/theforeman/puppet-git/compare/6.3.0...7.0.0)
+
+**Breaking changes:**
+
+- Drop Puppet 5 [\#80](https://github.com/theforeman/puppet-git/pull/80) ([ehelms](https://github.com/ehelms))
+
+**Implemented enhancements:**
+
+- Accept Datatype Sensitive for git source URL [\#78](https://github.com/theforeman/puppet-git/pull/78) ([cocker-cc](https://github.com/cocker-cc))
+- Allow Puppet 7 compatible versions of mods [\#77](https://github.com/theforeman/puppet-git/pull/77) ([ekohl](https://github.com/ekohl))
+
 ## [6.3.0](https://github.com/theforeman/puppet-git/tree/6.3.0) (2021-04-26)
 
 [Full Changelog](https://github.com/theforeman/puppet-git/compare/6.2.0...6.3.0)
