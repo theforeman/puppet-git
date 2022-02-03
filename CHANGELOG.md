@@ -1,5 +1,17 @@
 # Changelog
 
+## [7.1.0](https://github.com/theforeman/puppet-git/tree/7.1.0) (2022-02-03)
+
+[Full Changelog](https://github.com/theforeman/puppet-git/compare/7.0.0...7.1.0)
+
+**Implemented enhancements:**
+
+- Support Debian 11 and Ubuntu 20.04 [\#84](https://github.com/theforeman/puppet-git/pull/84) ([ekohl](https://github.com/ekohl))
+
+**Merged pull requests:**
+
+- Pin rdoc to \< 6.4 [\#83](https://github.com/theforeman/puppet-git/pull/83) ([ekohl](https://github.com/ekohl))
+
 ## [7.0.0](https://github.com/theforeman/puppet-git/tree/7.0.0) (2021-07-22)
 
 [Full Changelog](https://github.com/theforeman/puppet-git/compare/6.3.0...7.0.0)
