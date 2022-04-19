@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.2.0](https://github.com/theforeman/puppet-git/tree/7.2.0) (2022-04-20)
+
+[Full Changelog](https://github.com/theforeman/puppet-git/compare/7.1.0...7.2.0)
+
+**Implemented enhancements:**
+
+- Allow puppetlabs/stdlib 8.x [\#86](https://github.com/theforeman/puppet-git/pull/86) ([ekohl](https://github.com/ekohl))
+
 ## [7.1.0](https://github.com/theforeman/puppet-git/tree/7.1.0) (2022-02-03)
 
 [Full Changelog](https://github.com/theforeman/puppet-git/compare/7.0.0...7.1.0)
