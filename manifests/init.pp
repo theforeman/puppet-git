@@ -14,9 +14,9 @@
 #   }
 #
 class git (
-  $bin = undef,
-  $package = undef,
-  $package_ensure = undef,
+  Optional[String[1]] $bin = undef,
+  Optional[String[1]] $package = undef,
+  Optional[String[1]] $package_ensure = undef,
 ) {
   ensure_packages([$package], { 'ensure' => $package_ensure })
 }

@@ -39,16 +39,16 @@
 #   }
 #
 define git::repo (
-  String $target,
+  String[1] $target,
   Boolean $bare = false,
-  Optional[Variant[String, Sensitive[String]]] $source = undef,
-  String $user = 'root',
-  String $group = 'root',
-  String $mode = '0755',
+  Optional[Variant[String[1], Sensitive[String[1]]]] $source = undef,
+  String[1] $user = 'root',
+  String[1] $group = 'root',
+  Stdlib::Filemode $mode = '0755',
   Stdlib::Absolutepath $workdir = '/tmp',
   Optional[String] $args = undef,
   Optional[Integer] $timeout = undef,
-  String $bin = $git::bin,
+  String[1] $bin = $git::bin,
 ) {
   require git
 
